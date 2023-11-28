@@ -1,0 +1,64 @@
+ori_resnet
+=== Performance summary ===
+Throughput: 1142.15 qps
+Latency: min = 0.60437 ms, max = 2.97852 ms, mean = 0.887535 ms, median = 0.611816 ms, percentile(90%) = 2.89124 ms, percentile(95%) = 2.93127 ms, percentile(99%) = 2.95151 ms
+Enqueue Time: min = 0.0876465 ms, max = 0.298096 ms, mean = 0.145432 ms, median = 0.135742 ms, percentile(90%) = 0.184082 ms, percentile(95%) = 0.208008 ms, percentile(99%) = 0.247314 ms
+H2D Latency: min = 0.00756836 ms, max = 0.0997925 ms, mean = 0.0102573 ms, median = 0.00891113 ms, percentile(90%) = 0.0151367 ms, percentile(95%) = 0.0175781 ms, percentile(99%) = 0.0228882 ms
+GPU Compute Time: min = 0.591797 ms, max = 2.95728 ms, mean = 0.871464 ms, median = 0.595947 ms, percentile(90%) = 2.87646 ms, percentile(95%) = 2.91638 ms, percentile(99%) = 2.93677 ms
+D2H Latency: min = 0.00363159 ms, max = 0.0269165 ms, mean = 0.00581274 ms, median = 0.00506592 ms, percentile(90%) = 0.0070343 ms, percentile(95%) = 0.00756836 ms, percentile(99%) = 0.0231934 ms
+Total Host Walltime: 3.0031 s
+Total GPU Compute Time: 2.98912 s
+* GPU compute time is unstable, with coefficient of variance = 82.0607%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+ori_resnet_sim
+=== Performance summary ===
+Throughput: 1060.03 qps
+Latency: min = 0.637329 ms, max = 3.01074 ms, mean = 0.95336 ms, median = 0.64624 ms, percentile(90%) = 2.9386 ms, percentile(95%) = 2.97119 ms, percentile(99%) = 2.98706 ms
+Enqueue Time: min = 0.0926514 ms, max = 0.318726 ms, mean = 0.147167 ms, median = 0.135742 ms, percentile(90%) = 0.190674 ms, percentile(95%) = 0.231308 ms, percentile(99%) = 0.252319 ms
+H2D Latency: min = 0.00744629 ms, max = 0.102417 ms, mean = 0.0104435 ms, median = 0.0090332 ms, percentile(90%) = 0.0158691 ms, percentile(95%) = 0.0180664 ms, percentile(99%) = 0.0205078 ms
+GPU Compute Time: min = 0.624512 ms, max = 2.99414 ms, mean = 0.937416 ms, median = 0.629761 ms, percentile(90%) = 2.92358 ms, percentile(95%) = 2.95618 ms, percentile(99%) = 2.9707 ms
+D2H Latency: min = 0.00366211 ms, max = 0.0270996 ms, mean = 0.00550093 ms, median = 0.00463867 ms, percentile(90%) = 0.00695801 ms, percentile(95%) = 0.00738525 ms, percentile(99%) = 0.0224609 ms
+Total Host Walltime: 3.00368 s
+Total GPU Compute Time: 2.98473 s
+* GPU compute time is unstable, with coefficient of variance = 79.939%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+qat_int8_resnet
+=== Performance summary ===
+Throughput: 3227.51 qps
+Latency: min = 0.193604 ms, max = 4.62805 ms, mean = 0.302227 ms, median = 0.199463 ms, percentile(90%) = 0.247559 ms, percentile(95%) = 0.388916 ms, percentile(99%) = 2.51257 ms
+Enqueue Time: min = 0.128052 ms, max = 4.70349 ms, mean = 0.151161 ms, median = 0.138184 ms, percentile(90%) = 0.194885 ms, percentile(95%) = 0.221924 ms, percentile(99%) = 0.316406 ms
+H2D Latency: min = 0.00683594 ms, max = 0.112183 ms, mean = 0.00931666 ms, median = 0.00817871 ms, percentile(90%) = 0.010498 ms, percentile(95%) = 0.017395 ms, percentile(99%) = 0.0236816 ms
+GPU Compute Time: min = 0.182129 ms, max = 4.61511 ms, mean = 0.286851 ms, median = 0.185303 ms, percentile(90%) = 0.215088 ms, percentile(95%) = 0.375 ms, percentile(99%) = 2.49243 ms
+D2H Latency: min = 0.00341797 ms, max = 0.0317383 ms, mean = 0.00606035 ms, median = 0.00512695 ms, percentile(90%) = 0.00708008 ms, percentile(95%) = 0.00866699 ms, percentile(99%) = 0.0254517 ms
+Total Host Walltime: 3.00448 s
+Total GPU Compute Time: 2.78159 s
+* GPU compute time is unstable, with coefficient of variance = 155.483%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+ptq_fp16_resnet
+=== Performance summary ===
+Throughput: 3077.12 qps
+Latency: min = 0.216492 ms, max = 4.32129 ms, mean = 0.328193 ms, median = 0.222412 ms, percentile(90%) = 0.259521 ms, percentile(95%) = 0.411194 ms, percentile(99%) = 2.55225 ms
+Enqueue Time: min = 0.0939941 ms, max = 2.59766 ms, mean = 0.126349 ms, median = 0.116943 ms, percentile(90%) = 0.145996 ms, percentile(95%) = 0.153442 ms, percentile(99%) = 0.204346 ms
+H2D Latency: min = 0.00732422 ms, max = 0.101562 ms, mean = 0.00929121 ms, median = 0.00854492 ms, percentile(90%) = 0.00952148 ms, percentile(95%) = 0.0109863 ms, percentile(99%) = 0.0229492 ms
+GPU Compute Time: min = 0.203735 ms, max = 4.30798 ms, mean = 0.312497 ms, median = 0.207886 ms, percentile(90%) = 0.227295 ms, percentile(95%) = 0.396301 ms, percentile(99%) = 2.53748 ms
+D2H Latency: min = 0.00366211 ms, max = 0.0324707 ms, mean = 0.00640535 ms, median = 0.00561523 ms, percentile(90%) = 0.00756836 ms, percentile(95%) = 0.00848389 ms, percentile(99%) = 0.0246582 ms
+Total Host Walltime: 3.00053 s
+Total GPU Compute Time: 2.88529 s
+* GPU compute time is unstable, with coefficient of variance = 147.509%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+ptq_int8_resnet
+=== Performance summary ===
+Throughput: 4213.96 qps
+Latency: min = 0.152344 ms, max = 4.90735 ms, mean = 0.210341 ms, median = 0.157837 ms, percentile(90%) = 0.183228 ms, percentile(95%) = 0.299438 ms, percentile(99%) = 2.45093 ms
+Enqueue Time: min = 0.0880737 ms, max = 4.95544 ms, mean = 0.106146 ms, median = 0.0986328 ms, percentile(90%) = 0.121826 ms, percentile(95%) = 0.150635 ms, percentile(99%) = 0.21582 ms
+H2D Latency: min = 0.00683594 ms, max = 0.10083 ms, mean = 0.0095723 ms, median = 0.00830078 ms, percentile(90%) = 0.0108643 ms, percentile(95%) = 0.017334 ms, percentile(99%) = 0.0251465 ms
+GPU Compute Time: min = 0.140137 ms, max = 4.8916 ms, mean = 0.194547 ms, median = 0.143433 ms, percentile(90%) = 0.153687 ms, percentile(95%) = 0.285706 ms, percentile(99%) = 2.43311 ms
+D2H Latency: min = 0.00341797 ms, max = 0.030426 ms, mean = 0.00622225 ms, median = 0.00512695 ms, percentile(90%) = 0.00756836 ms, percentile(95%) = 0.0133057 ms, percentile(99%) = 0.0236816 ms
+Total Host Walltime: 3.0024 s
+Total GPU Compute Time: 2.46141 s
+* GPU compute time is unstable, with coefficient of variance = 160.165%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.

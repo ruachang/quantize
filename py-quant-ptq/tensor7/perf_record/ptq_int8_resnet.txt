@@ -1,0 +1,24 @@
+In trt model int8_resnet: Final accuracy of expression: 0.2336, Average reasoning time: 0.0005576
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[   0    0    0    0    0 2931]
+ [   0    0    0    0    0 2427]
+ [   0    0    0    0    0 1563]
+ [   0    0    0    0    0 3786]
+ [   0    0    0    0    0 1557]
+ [   0    0    0    0    0 3738]] 
+In trt model ori_resnet: Final accuracy of expression: 0.2408, Average reasoning time: 0.0014097
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[   0    0  914 1962   55    0]
+ [   0    0  176 2162   89    0]
+ [   0    0  645  788  130    0]
+ [   0    0  345 3068  373    0]
+ [   0   19  611  787  140    0]
+ [   0    0  279 2770  689    0]] 
+In trt model fp16_resnet: Final accuracy of expression: 0.2410, Average reasoning time: 0.0006437
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[   0    0  914 1962   55    0]
+ [   0    0  176 2162   89    0]
+ [   0    0  645  788  130    0]
+ [   0    0  348 3071  367    0]
+ [   0   19  611  787  140    0]
+ [   0    0  279 2770  689    0]] 

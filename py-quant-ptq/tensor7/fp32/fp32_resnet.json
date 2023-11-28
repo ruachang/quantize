@@ -1,0 +1,25 @@
+[
+  { "count" : 2202 }
+, { "name" : "Conv_0 + Relu_1", "timeMs" : 38.0863, "averageMs" : 0.0172962, "percentage" : 1.937 }
+, { "name" : "Conv_2 + Relu_3", "timeMs" : 44.7228, "averageMs" : 0.0203101, "percentage" : 2.27452 }
+, { "name" : "Conv_4 + Add_5 + Relu_6", "timeMs" : 121.319, "averageMs" : 0.0550947, "percentage" : 6.17003 }
+, { "name" : "Conv_7 + Relu_8", "timeMs" : 45.1608, "averageMs" : 0.020509, "percentage" : 2.29679 }
+, { "name" : "Conv_9 + Add_10 + Relu_11", "timeMs" : 98.1911, "averageMs" : 0.0445918, "percentage" : 4.99382 }
+, { "name" : "Conv_12 + Relu_13", "timeMs" : 149.488, "averageMs" : 0.0678873, "percentage" : 7.60268 }
+, { "name" : "Conv_14", "timeMs" : 50.6004, "averageMs" : 0.0229793, "percentage" : 2.57344 }
+, { "name" : "Conv_15 + Add_16 + Relu_17", "timeMs" : 35.1954, "averageMs" : 0.0159834, "percentage" : 1.78997 }
+, { "name" : "Conv_18 + Relu_19", "timeMs" : 51.712, "averageMs" : 0.0234841, "percentage" : 2.62998 }
+, { "name" : "Conv_20 + Add_21 + Relu_22", "timeMs" : 87.0979, "averageMs" : 0.039554, "percentage" : 4.42964 }
+, { "name" : "Conv_23 + Relu_24", "timeMs" : 132.765, "averageMs" : 0.0602931, "percentage" : 6.7522 }
+, { "name" : "Conv_25", "timeMs" : 72.9695, "averageMs" : 0.0331378, "percentage" : 3.71109 }
+, { "name" : "Conv_26 + Add_27 + Relu_28", "timeMs" : 47.5691, "averageMs" : 0.0216027, "percentage" : 2.41927 }
+, { "name" : "Conv_29 + Relu_30", "timeMs" : 78.5102, "averageMs" : 0.035654, "percentage" : 3.99288 }
+, { "name" : "Conv_31 + Add_32 + Relu_33", "timeMs" : 144.645, "averageMs" : 0.065688, "percentage" : 7.35637 }
+, { "name" : "Conv_34 + Relu_35", "timeMs" : 181.912, "averageMs" : 0.0826121, "percentage" : 9.2517 }
+, { "name" : "Conv_36", "timeMs" : 126.689, "averageMs" : 0.0575335, "percentage" : 6.44316 }
+, { "name" : "Conv_37 + Add_38 + Relu_39", "timeMs" : 63.8183, "averageMs" : 0.028982, "percentage" : 3.24568 }
+, { "name" : "Conv_40 + Relu_41", "timeMs" : 122.002, "averageMs" : 0.0554052, "percentage" : 6.20481 }
+, { "name" : "Conv_42 + Add_43 + Relu_44", "timeMs" : 240.002, "averageMs" : 0.108993, "percentage" : 12.206 }
+, { "name" : "AveragePool_47", "timeMs" : 14.7857, "averageMs" : 0.00671465, "percentage" : 0.751971 }
+, { "name" : "Gemm_54", "timeMs" : 19.0129, "averageMs" : 0.00863436, "percentage" : 0.966958 }
+]

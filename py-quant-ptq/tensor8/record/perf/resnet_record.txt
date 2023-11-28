@@ -1,0 +1,40 @@
+In trt model ori_resnet: Final accuracy of expression: 0.4704, Average reasoning time: 0.0012051
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[ 805 1901    1    0  224    0]
+ [ 106 2226    0    0   95    0]
+ [ 104  789  527   60   44   39]
+ [ 111 2377    6 1208   84    0]
+ [ 128 1265    0    0  164    0]
+ [   9  625  419    0   87 2598]] 
+In trt model ori_resnet_sim: Final accuracy of expression: 0.4704, Average reasoning time: 0.0012241
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[ 805 1901    1    0  224    0]
+ [ 106 2226    0    0   95    0]
+ [ 104  789  527   60   44   39]
+ [ 111 2377    6 1208   84    0]
+ [ 128 1265    0    0  164    0]
+ [   9  625  419    0   87 2598]] 
+In trt model ptq_fp16_resnet: Final accuracy of expression: 0.4702, Average reasoning time: 0.0006034
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[ 805 1901    1    0  224    0]
+ [ 106 2226    0    0   95    0]
+ [ 104  789  527   60   44   39]
+ [ 111 2381    6 1204   84    0]
+ [ 128 1265    0    0  164    0]
+ [   9  625  419    0   87 2598]] 
+In trt model ptq_int8_resnet: Final accuracy of expression: 0.2336, Average reasoning time: 0.0005195
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[   0    0    0    0    0 2931]
+ [   0    0    0    0    0 2427]
+ [   0    0    0    0    0 1563]
+ [   0    0    0    0    0 3786]
+ [   0    0    0    0    0 1557]
+ [   0    0    0    0    0 3738]] 
+In trt model qat_int8_resnet: Final accuracy of expression: 0.5697, Average reasoning time: 0.0006806
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[2106  808    7    0   10    0]
+ [ 505 1858   49    0   15    0]
+ [ 561  195  805    0    0    2]
+ [ 904 1502  134 1223   23    0]
+ [ 660  704  184    0    0    9]
+ [  95  224  287    0    8 3124]] 

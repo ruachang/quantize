@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/home/developers/liuchang/dl_env/anaconda3/envs/pytorch18/bin/python",
+    "terminal.integrated.scrollback": 10000,
+    "python.analysis.extraPaths": [
+        "./trtexe"
+    ]
+}

@@ -1,0 +1,16 @@
+In trt model ori_mffcnn2: Final accuracy of expression: 0.8015, Average reasoning time: 0.0016597, Average infer time: 0.0010505
+Number of samples: [[135 177  75 207  84 249]], confusion matrix: 
+ [[ 39  58   5   0  33   0]
+ [  0 177   0   0   0   0]
+ [  0   9  50   7   5   4]
+ [  0  40   0 165   2   0]
+ [  0   3   0   0  81   0]
+ [  2   0   6   0  10 231]] 
+In trt model int8_histogram_percentile99: Final accuracy of expression: 0.7530, Average reasoning time: 0.0014366, Average infer time: 0.0012181
+Number of samples: [[135 177  75 207  84 249]], confusion matrix: 
+ [[ 71  20   7   1  22  14]
+ [  2 153   0   0   5  17]
+ [  1   2  38   5   1  28]
+ [  0  49   0 130   1  27]
+ [  2   2   0   0  65  15]
+ [  2   0   3   0   3 241]] 

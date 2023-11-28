@@ -1,0 +1,1 @@
+{"model_options": {"Format": "ONNX", "Model": "/home/developers/liuchang/quantize/py-quant-ptq/param_test/int8_histogram_percentile99.9999_mffcnn.onnx"}, "build_options": {"Max batch": "explicit batch", "Memory Pools": "workspace", "minTiming": "1", "avgTiming": "8", "Precision": "FP32+INT8"}}

@@ -1,0 +1,30 @@
+[12/22/2022-09:14:39] [V] [TRT] Engine Layer Information:
+[12/22/2022-09:14:39] [V] [TRT] Layer(Reformat): Conv_0 + Relu_1 input reformatter 0, Tactic: 0, input[Float(3,48,48)] -> Conv_0 + Relu_1 reformatted input 0[Half(3,48,48)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_0 + Relu_1, Tactic: 3546424067684403057, Conv_0 + Relu_1 reformatted input 0[Half(3,48,48)] -> 125[Half(64,48,48)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop_indexed): Conv_2 + Relu_3, Tactic: 2835786846016979545, 125[Half(64,48,48)] -> 128[Half(64,48,48)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop_indexed): Conv_4 + Add_5 + Relu_6, Tactic: 2835786846016979545, 128[Half(64,48,48)], 125[Half(64,48,48)] -> 132[Half(64,48,48)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop_indexed): Conv_7 + Relu_8, Tactic: 2835786846016979545, 132[Half(64,48,48)] -> 135[Half(64,48,48)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop_indexed): Conv_9 + Add_10 + Relu_11, Tactic: 2835786846016979545, 135[Half(64,48,48)], 132[Half(64,48,48)] -> 139[Half(64,48,48)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop_indexed): Conv_12 + Relu_13, Tactic: 2835786846016979545, 139[Half(64,48,48)] -> 142[Half(128,24,24)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_14, Tactic: 3546424067684403057, 142[Half(128,24,24)] -> 218[Half(128,24,24)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop_indexed): Conv_15 + Add_16 + Relu_17, Tactic: 2835786846016979545, 139[Half(64,48,48)], 218[Half(128,24,24)] -> 148[Half(128,24,24)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_18 + Relu_19, Tactic: 3546424067684403057, 148[Half(128,24,24)] -> 151[Half(128,24,24)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_20 + Add_21 + Relu_22, Tactic: -5634849406670564996, 151[Half(128,24,24)], 148[Half(128,24,24)] -> 155[Half(128,24,24)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_23 + Relu_24, Tactic: -5634849406670564996, 155[Half(128,24,24)] -> 158[Half(256,12,12)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_25, Tactic: 3546424067684403057, 158[Half(256,12,12)] -> 233[Half(256,12,12)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_26 + Add_27 + Relu_28, Tactic: -2920441725866116779, 155[Half(128,24,24)], 233[Half(256,12,12)] -> 164[Half(256,12,12)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_29 + Relu_30, Tactic: -5634849406670564996, 164[Half(256,12,12)] -> 167[Half(256,12,12)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_31 + Add_32 + Relu_33, Tactic: -5634849406670564996, 167[Half(256,12,12)], 164[Half(256,12,12)] -> 171[Half(256,12,12)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_34 + Relu_35, Tactic: 3546424067684403057, 171[Half(256,12,12)] -> 174[Half(512,6,6)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_36, Tactic: 3546424067684403057, 174[Half(512,6,6)] -> 248[Half(512,6,6)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_37 + Add_38 + Relu_39, Tactic: 658286313529008223, 171[Half(256,12,12)], 248[Half(512,6,6)] -> 180[Half(512,6,6)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_40 + Relu_41, Tactic: -5634849406670564996, 180[Half(512,6,6)] -> 183[Half(512,6,6)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Conv_42 + Add_43 + Relu_44, Tactic: 3546424067684403057, 183[Half(512,6,6)], 180[Half(512,6,6)] -> 187[Half(512,6,6)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(Pooling): AveragePool_47, Tactic: -2, 187[Half(512,6,6)] -> 190[Half(512,1,1)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(fprop): Gemm_54, Tactic: -8975263741524541400, 190[Half(512,1,1)] -> (Unnamed Layer* 60) [Fully Connected]_output[Half(6,1,1)]
+[12/22/2022-09:14:39] [V] [TRT] Layer(Reformat): (Unnamed Layer* 64) [Shuffle] input reformatter 0, Tactic: 0, (Unnamed Layer* 60) [Fully Connected]_output[Half(6,1,1)] -> (Unnamed Layer* 64) [Shuffle] reformatted input 0[Float(6,1,1)]
+[12/22/2022-09:14:39] [I] Engine built in 103.784 sec.
+[12/22/2022-09:14:39] [W] [TRT] TensorRT was linked against cuBLAS/cuBLAS LT 11.3.0 but loaded cuBLAS/cuBLAS LT 11.2.1
+[12/22/2022-09:14:39] [V] [TRT] Allocated persistent device memory of size 22363648
+[12/22/2022-09:14:39] [V] [TRT] Allocated activation device memory of size 884736
+[12/22/2022-09:14:39] [V] [TRT] Assigning persistent memory blocks for various profiles

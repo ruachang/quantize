@@ -1,0 +1,27 @@
+[
+  { "count" : 8991 }
+, { "name" : "Conv_0 + Relu_1 input reformatter 0", "timeMs" : 95.6554, "averageMs" : 0.010639, "percentage" : 3.59336 }
+, { "name" : "Conv_0 + Relu_1", "timeMs" : 96.7569, "averageMs" : 0.0107615, "percentage" : 3.63474 }
+, { "name" : "Conv_2 + Relu_3", "timeMs" : 97.5618, "averageMs" : 0.0108511, "percentage" : 3.66498 }
+, { "name" : "Conv_4 + Add_5 + Relu_6", "timeMs" : 92.14, "averageMs" : 0.010248, "percentage" : 3.4613 }
+, { "name" : "Conv_7 + Relu_8", "timeMs" : 98.7954, "averageMs" : 0.0109883, "percentage" : 3.71132 }
+, { "name" : "Conv_9 + Add_10 + Relu_11", "timeMs" : 91.2081, "averageMs" : 0.0101444, "percentage" : 3.4263 }
+, { "name" : "Conv_12 + Relu_13", "timeMs" : 84.8124, "averageMs" : 0.00943303, "percentage" : 3.18604 }
+, { "name" : "Conv_14", "timeMs" : 100.758, "averageMs" : 0.0112066, "percentage" : 3.78505 }
+, { "name" : "Conv_15 + Add_16 + Relu_17", "timeMs" : 65.2201, "averageMs" : 0.00725394, "percentage" : 2.45004 }
+, { "name" : "Conv_18 + Relu_19", "timeMs" : 103.886, "averageMs" : 0.0115545, "percentage" : 3.90257 }
+, { "name" : "Conv_20 + Add_21 + Relu_22", "timeMs" : 109.439, "averageMs" : 0.012172, "percentage" : 4.11114 }
+, { "name" : "Conv_23 + Relu_24", "timeMs" : 99.8954, "averageMs" : 0.0111106, "percentage" : 3.75264 }
+, { "name" : "Conv_25", "timeMs" : 141.391, "averageMs" : 0.0157259, "percentage" : 5.31147 }
+, { "name" : "Conv_26 + Add_27 + Relu_28", "timeMs" : 73.2934, "averageMs" : 0.00815187, "percentage" : 2.75332 }
+, { "name" : "Conv_29 + Relu_30", "timeMs" : 138.593, "averageMs" : 0.0154147, "percentage" : 5.20635 }
+, { "name" : "Conv_31 + Add_32 + Relu_33", "timeMs" : 136.776, "averageMs" : 0.0152126, "percentage" : 5.1381 }
+, { "name" : "Conv_34 + Relu_35", "timeMs" : 142.013, "averageMs" : 0.015795, "percentage" : 5.3348 }
+, { "name" : "Conv_36", "timeMs" : 207.538, "averageMs" : 0.0230829, "percentage" : 7.7963 }
+, { "name" : "Conv_37 + Add_38 + Relu_39", "timeMs" : 76.2095, "averageMs" : 0.0084762, "percentage" : 2.86286 }
+, { "name" : "Conv_40 + Relu_41", "timeMs" : 206.625, "averageMs" : 0.0229813, "percentage" : 7.76199 }
+, { "name" : "Conv_42 + Add_43 + Relu_44", "timeMs" : 218.203, "averageMs" : 0.0242691, "percentage" : 8.19695 }
+, { "name" : "AveragePool_47", "timeMs" : 57.9059, "averageMs" : 0.00644043, "percentage" : 2.17527 }
+, { "name" : "Gemm_54", "timeMs" : 79.8529, "averageMs" : 0.00888142, "percentage" : 2.99973 }
+, { "name" : "(Unnamed Layer* 64) [Shuffle] input reformatter 0", "timeMs" : 47.4739, "averageMs" : 0.00528016, "percentage" : 1.78339 }
+]

@@ -1,0 +1,24 @@
+In trt model int8_mfcnn: Final accuracy of expression: 0.7552, Average reasoning time: 0.0024426
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[ 820 1147   97    0  867    0]
+ [   0 2392    7    0   24    4]
+ [   0  214  982  122  197   48]
+ [   0  806   11 2940   23    6]
+ [   0   56    0    0 1498    3]
+ [  12    2   85    0  187 3452]] 
+In trt model ori_mfcnn: Final accuracy of expression: 0.7645, Average reasoning time: 0.0024082
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[ 848 1084  100    0  899    0]
+ [   0 2391    7    0   25    4]
+ [   9  176 1008  132  200   38]
+ [   4  665   11 3053   47    6]
+ [   0   27    7    0 1523    0]
+ [  12    1  127    0  188 3410]] 
+In trt model fp16_mfcnn: Final accuracy of expression: 0.7643, Average reasoning time: 0.0020086
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[ 848 1084  100    0  899    0]
+ [   0 2391    7    0   25    4]
+ [   9  176 1008  132  200   38]
+ [   4  665   11 3053   47    6]
+ [   0   27    7    0 1523    0]
+ [  12    1  130    0  188 3407]] 

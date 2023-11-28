@@ -1,0 +1,32 @@
+In trt model ori_mffcnn: Final accuracy of expression: 0.8857, Average reasoning time: 0.0023205, Average infer time: 0.0018965
+Number of samples: [[135 177  75 207  84 249]], confusion matrix: 
+ [[116   8   3   0   8   0]
+ [ 12 155   0   0   0  10]
+ [  8   6  41   3   0  17]
+ [  0   2   0 205   0   0]
+ [ 10   5   0   0  61   8]
+ [  0   0   0   0   6 243]] 
+In trt model ptq_fp16_mfcnn: Final accuracy of expression: 0.8846, Average reasoning time: 0.0013637, Average infer time: 0.0013160
+Number of samples: [[135 177  75 207  84 249]], confusion matrix: 
+ [[116   8   3   0   8   0]
+ [ 12 155   0   0   0  10]
+ [  8   6  40   4   0  17]
+ [  0   2   0 205   0   0]
+ [ 10   5   0   0  61   8]
+ [  0   0   0   0   6 243]] 
+In trt model ptq_int8_mfcnn: Final accuracy of expression: 0.8673, Average reasoning time: 0.0015748, Average infer time: 0.0009571
+Number of samples: [[135 177  75 207  84 249]], confusion matrix: 
+ [[115   5   4   0  11   0]
+ [ 13 136   0   0   1  27]
+ [  8   2  44   3   0  18]
+ [  3   0   0 203   0   1]
+ [  6   2   3   0  63  10]
+ [  0   0   0   0   6 243]] 
+In trt model qat_int8_mffcnn: Final accuracy of expression: 0.6170, Average reasoning time: 0.0014146, Average infer time: 0.0011697
+Number of samples: [[135 177  75 207  84 249]], confusion matrix: 
+ [[119   5   0   0  11   0]
+ [ 80  94   0   0   2   1]
+ [ 40   6  16   1  11   1]
+ [ 79  25   0  97   5   1]
+ [ 19   6   0   0  59   0]
+ [ 23   4   0  12  23 187]] 

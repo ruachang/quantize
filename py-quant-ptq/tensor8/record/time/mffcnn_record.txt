@@ -1,0 +1,84 @@
+暂时记录一下生成trt时候的输出
+
+=== Explanations of the performance metrics ===
+Total Host Walltime: the host walltime from when the first query (after warmups) is enqueued to when the last query is completed.
+GPU Compute Time: the GPU latency to execute the kernels for a query.
+Total GPU Compute Time: the summation of the GPU Compute Time of all the queries. If this is significantly shorter than Total Host Walltime, the GPU may be under-utilized because of host-side overheads or data transfers.
+Throughput: the observed throughput computed by dividing the number of queries by the Total Host Walltime. If this is significantly lower than the reciprocal of GPU Compute Time, the GPU may be under-utilized because of host-side overheads or data transfers.
+Enqueue Time: the host latency to enqueue a query. If this is longer than GPU Compute Time, the GPU may be under-utilized.
+H2D Latency: the latency for host-to-device data transfers for input tensors of a single query.
+D2H Latency: the latency for device-to-host data transfers for output tensors of a single query.
+Latency: the summation of H2D Latency, GPU Compute Time, and D2H Latency. This is the latency to infer a single query.
+
+qta_int8_mfcnn.trt 
+=== Performance summary ===
+Throughput: 506.144 qps
+Latency: min = 1.3562 ms, max = 4.8269 ms, mean = 1.98819 ms, median = 1.49585 ms, percentile(90%) = 3.68225 ms, percentile(95%) = 3.69849 ms, percentile(99%) = 3.7179 ms
+Enqueue Time: min = 1.30188 ms, max = 5.32861 ms, mean = 1.48839 ms, median = 1.35378 ms, percentile(90%) = 1.79175 ms, percentile(95%) = 1.86084 ms, percentile(99%) = 1.97437 ms
+H2D Latency: min = 0.00512695 ms, max = 0.0958252 ms, mean = 0.0101719 ms, median = 0.00695801 ms, percentile(90%) = 0.0184326 ms, percentile(95%) = 0.0219727 ms, percentile(99%) = 0.0249023 ms
+GPU Compute Time: min = 1.34448 ms, max = 4.80359 ms, mean = 1.97096 ms, median = 1.48364 ms, percentile(90%) = 3.66187 ms, percentile(95%) = 3.67627 ms, percentile(99%) = 3.69562 ms
+D2H Latency: min = 0.00476074 ms, max = 0.0291748 ms, mean = 0.00706384 ms, median = 0.00598145 ms, percentile(90%) = 0.00830078 ms, percentile(95%) = 0.0106201 ms, percentile(99%) = 0.0273438 ms
+Total Host Walltime: 3.00903 s
+Total GPU Compute Time: 3.00177 s
+* Throughput may be bound by Enqueue Time rather than GPU Compute and the GPU may be under-utilized
+
+ori_mffcnn.trt 
+=== Performance summary ===
+Throughput: 444.018 qps
+Latency: min = 1.52124 ms, max = 4.61292 ms, mean = 2.26475 ms, median = 1.67551 ms, percentile(90%) = 3.84387 ms, percentile(95%) = 3.85962 ms, percentile(99%) = 3.87476 ms
+Enqueue Time: min = 1.10303 ms, max = 6.33875 ms, mean = 1.57718 ms, median = 1.47443 ms, percentile(90%) = 1.89404 ms, percentile(95%) = 1.97449 ms, percentile(99%) = 3.00293 ms
+H2D Latency: min = 0.00537109 ms, max = 0.0977783 ms, mean = 0.0108107 ms, median = 0.00732422 ms, percentile(90%) = 0.0212402 ms, percentile(95%) = 0.0219727 ms, percentile(99%) = 0.0296631 ms
+GPU Compute Time: min = 1.5083 ms, max = 4.5835 ms, mean = 2.24687 ms, median = 1.66199 ms, percentile(90%) = 3.81958 ms, percentile(95%) = 3.84082 ms, percentile(99%) = 3.85034 ms
+D2H Latency: min = 0.00488281 ms, max = 0.0303955 ms, mean = 0.00706929 ms, median = 0.00622559 ms, percentile(90%) = 0.00830078 ms, percentile(95%) = 0.00891113 ms, percentile(99%) = 0.0250244 ms
+Total Host Walltime: 2.31973 s
+Total GPU Compute Time: 2.31428 s
+* Throughput may be bound by Enqueue Time rather than GPU Compute and the GPU may be under-utilized.
+  If not already in use, --useCudaGraph (utilize CUDA graphs where possible) may increase the throughput.
+* GPU compute time is unstable, with coefficient of variance = 44.6458%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+ori_mffcnn_sim
+=== Performance summary ===
+[02/24/2023-21:45:49] [I] Throughput: 528.809 qps
+[02/24/2023-21:45:49] [I] Latency: min = 1.55518 ms, max = 7.67932 ms, mean = 1.9003 ms, median = 1.56006 ms, percentile(90%) = 3.85229 ms, percentile(95%) = 3.87772 ms, percentile(99%) = 3.90759 ms
+[02/24/2023-21:45:49] [I] Enqueue Time: min = 1.06952 ms, max = 7.65796 ms, mean = 1.42923 ms, median = 1.34718 ms, percentile(90%) = 1.72345 ms, percentile(95%) = 1.84827 ms, percentile(99%) = 2.6283 ms
+[02/24/2023-21:45:49] [I] H2D Latency: min = 0.00598145 ms, max = 0.0393066 ms, mean = 0.00841037 ms, median = 0.00695801 ms, percentile(90%) = 0.0133057 ms, percentile(95%) = 0.0184326 ms, percentile(99%) = 0.0212402 ms
+[02/24/2023-21:45:49] [I] GPU Compute Time: min = 1.54199 ms, max = 7.6626 ms, mean = 1.88499 ms, median = 1.54614 ms, percentile(90%) = 3.83081 ms, percentile(95%) = 3.85632 ms, percentile(99%) = 3.88818 ms
+[02/24/2023-21:45:49] [I] D2H Latency: min = 0.00500488 ms, max = 0.0256958 ms, mean = 0.00689995 ms, median = 0.00646973 ms, percentile(90%) = 0.00830078 ms, percentile(95%) = 0.00860596 ms, percentile(99%) = 0.0143738 ms
+[02/24/2023-21:45:49] [I] Total Host Walltime: 3.00487 s
+[02/24/2023-21:45:49] [I] Total GPU Compute Time: 2.99526 s
+[02/24/2023-21:45:49] [W] * Throughput may be bound by Enqueue Time rather than GPU Compute and the GPU may be under-utilized.
+[02/24/2023-21:45:49] [W]   If not already in use, --useCudaGraph (utilize CUDA graphs where possible) may increase the throughput.
+[02/24/2023-21:45:49] [W] * GPU compute time is unstable, with coefficient of variance = 41.947%.
+[02/24/2023-21:45:49] [W]   If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+
+ptq_fp16_mffcnn
+=== Performance summary ===
+Throughput: 463.868 qps
+Latency: min = 1.22058 ms, max = 6.64917 ms, mean = 2.15688 ms, median = 1.56879 ms, percentile(90%) = 3.54382 ms, percentile(95%) = 3.55859 ms, percentile(99%) = 3.60205 ms
+Enqueue Time: min = 1.32397 ms, max = 6.70178 ms, mean = 1.70112 ms, median = 1.68262 ms, percentile(90%) = 1.90112 ms, percentile(95%) = 1.96167 ms, percentile(99%) = 2.03638 ms
+H2D Latency: min = 0.00488281 ms, max = 0.0959473 ms, mean = 0.0108848 ms, median = 0.00805664 ms, percentile(90%) = 0.0222168 ms, percentile(95%) = 0.0229492 ms, percentile(99%) = 0.0269775 ms
+GPU Compute Time: min = 1.20728 ms, max = 6.6344 ms, mean = 2.1381 ms, median = 1.54968 ms, percentile(90%) = 3.52051 ms, percentile(95%) = 3.53998 ms, percentile(99%) = 3.58093 ms
+D2H Latency: min = 0.00463867 ms, max = 0.101562 ms, mean = 0.00789908 ms, median = 0.00646973 ms, percentile(90%) = 0.0090332 ms, percentile(95%) = 0.0172119 ms, percentile(99%) = 0.0219727 ms
+Total Host Walltime: 2.32825 s
+Total GPU Compute Time: 2.30915 s
+* Throughput may be bound by Enqueue Time rather than GPU Compute and the GPU may be under-utilized.
+  If not already in use, --useCudaGraph (utilize CUDA graphs where possible) may increase the throughput.
+* GPU compute time is unstable, with coefficient of variance = 46.9522%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+
+ptq_int8_mffcnn
+=== Performance summary ===
+Throughput: 451.976 qps
+Latency: min = 1.51819 ms, max = 6.1261 ms, mean = 2.22625 ms, median = 1.66461 ms, percentile(90%) = 3.84216 ms, percentile(95%) = 3.85986 ms, percentile(99%) = 3.88843 ms
+Enqueue Time: min = 1.15417 ms, max = 5.15881 ms, mean = 1.39114 ms, median = 1.32117 ms, percentile(90%) = 1.60925 ms, percentile(95%) = 1.66895 ms, percentile(99%) = 1.72583 ms
+H2D Latency: min = 0.00524902 ms, max = 0.097168 ms, mean = 0.0121753 ms, median = 0.00830078 ms, percentile(90%) = 0.0235596 ms, percentile(95%) = 0.0251465 ms, percentile(99%) = 0.0307312 ms
+GPU Compute Time: min = 1.50427 ms, max = 6.10303 ms, mean = 2.20651 ms, median = 1.64966 ms, percentile(90%) = 3.8175 ms, percentile(95%) = 3.83398 ms, percentile(99%) = 3.85944 ms
+D2H Latency: min = 0.00488281 ms, max = 0.0330811 ms, mean = 0.00756167 ms, median = 0.00646973 ms, percentile(90%) = 0.00860596 ms, percentile(95%) = 0.0136108 ms, percentile(99%) = 0.0290527 ms
+Total Host Walltime: 3.00459 s
+Total GPU Compute Time: 2.99644 s
+* Throughput may be bound by Enqueue Time rather than GPU Compute and the GPU may be under-utilized.
+  If not already in use, --useCudaGraph (utilize CUDA graphs where possible) may increase the throughput.
+* GPU compute time is unstable, with coefficient of variance = 45.5139%.
+  If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.

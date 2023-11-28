@@ -1,0 +1,16 @@
+In trt model fp32_resnet: Final accuracy of expression: 0.2408, Average reasoning time: 0.0014213
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[   0    0  914 1962   55    0]
+ [   0    0  176 2162   89    0]
+ [   0    0  645  788  130    0]
+ [   0    0  345 3068  373    0]
+ [   0   19  611  787  140    0]
+ [   0    0  279 2770  689    0]] 
+In trt model ori_resnet: Final accuracy of expression: 0.2408, Average reasoning time: 0.0012849
+Number of samples: [[2931 2427 1563 3786 1557 3738]], confusion matrix: 
+ [[   0    0  914 1962   55    0]
+ [   0    0  176 2162   89    0]
+ [   0    0  645  788  130    0]
+ [   0    0  345 3068  373    0]
+ [   0   19  611  787  140    0]
+ [   0    0  279 2770  689    0]] 
